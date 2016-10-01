@@ -27,3 +27,17 @@ aik thinking-in-react/index.js -r # -r optional for react hot load
 # Build
 aik thinking-in-react/index.js --build thinking-in-react/dist
 ```
+
+### Simple Counter in Cycle.js
+
+Just the simplest counter using [cycle.js](http://cycle.js.org/).
+
+![Simple Counter in Cycle.js](/simple-counter-cyclejs/preview.png)
+
+```sh
+# Run
+aik simple-counter-cyclejs/index.js
+
+# Build
+aik simple-counter-cyclejs/index.js --build simple-counter-cyclejs/dist
+```
