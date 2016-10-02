@@ -14,7 +14,13 @@ git clone git@github.com:d4rkr00t/aik-examples.git
 cd aik-examples
 ```
 
-### Thinking in React
+### Table of Content
+
+* [Thinking in React](#thinking-in-react)
+* [Simple Counter in Cycle.js](#simple-counter-in-cyclejs)
+* [Weather App RxJS](#weather-app-rxjs)
+
+## Thinking in React
 
 [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html) tutorial from official react web site.
 
@@ -22,13 +28,13 @@ cd aik-examples
 
 ```sh
 # Run
-aik thinking-in-react/index.js -r # -r optional for react hot load
+aik thinking-in-react/src/index.js -r # -r optional for react hot load
 
 # Build
-aik thinking-in-react/index.js --build thinking-in-react/dist
+aik thinking-in-react/src/index.js --build thinking-in-react/dist
 ```
 
-### Simple Counter in Cycle.js
+## Simple Counter in Cycle.js
 
 Just the simplest counter using [cycle.js](http://cycle.js.org/).
 
@@ -36,8 +42,29 @@ Just the simplest counter using [cycle.js](http://cycle.js.org/).
 
 ```sh
 # Run
-aik simple-counter-cyclejs/index.js
+aik simple-counter-cyclejs/src/index.js
 
 # Build
-aik simple-counter-cyclejs/index.js --build simple-counter-cyclejs/dist
+aik simple-counter-cyclejs/src/index.js --build simple-counter-cyclejs/dist
+```
+
+## Weather App RxJS
+
+Based on blog post ["Understanding Reactive Programming and RxJS"](https://auth0.com/blog/understanding-reactive-programming-and-rxjs/).
+
+![Weather App RxJS](/weather-app-rxjs/preview.png)
+
+Before run you have to get an API key as described in the blog or you can go straight to [get api key page](https://home.openweathermap.org/api_keys).
+Then add key to file **weather-app-rxjs/src/key.js** like this:
+
+```js
+export default 'your_api_key';
+```
+
+```sh
+# Run
+aik weather-app-rxjs/src/index.js
+
+# Build
+aik weather-app-rxjs/src/index.js --build weather-app-rxjs/dist
 ```
