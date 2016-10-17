@@ -1,0 +1,45 @@
+.searchBar {
+    display: block;
+
+    padding: 30px 20px 20px;
+
+    background-color: #c2185b;
+    margin-bottom: 20px;
+}
+
+.input {
+    font-size: 21px;
+
+    display: block;
+
+    width: 100%;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 4px 0;
+
+    text-align: left;
+
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    background: 0 0;
+    color: #fff;
+
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, .7);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.checkBoxContainer {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, .8);
+    line-height: 18px;
+}

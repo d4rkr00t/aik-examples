@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductRow from './product-row';
 import ProductCategoryRow from './product-category-row';
+import styles from './product-table.css';
 
 export default function ProductTable(props) {
   const rows = [];
@@ -15,14 +16,16 @@ export default function ProductTable(props) {
   });
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <div className={styles.productTable}>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
   );
 }
