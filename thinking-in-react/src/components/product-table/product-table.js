@@ -1,6 +1,6 @@
 import React from 'react';
-import ProductRow from './product-row';
-import ProductCategoryRow from './product-category-row';
+import ProductRow from 'components/product-row/product-row';
+import ProductCategoryRow from 'components/product-category-row/product-category-row';
 import styles from './product-table.css';
 
 export default function ProductTable(props) {

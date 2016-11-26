@@ -1,6 +1,6 @@
 import React from 'react';
-import SearchBar from './search-bar';
-import ProductTable from './product-table';
+import SearchBar from 'components/search-bar/search-bar';
+import ProductTable from 'components/product-table/product-table';
 
 export default React.createClass({
   displayName: 'FilterableProductTable',
