@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-bike {
+  background: url('./ic_directions_bike_48px_css.svg');
+}
+
+.icon-boat {
+  background: url('./ic_directions_boat_48px_css.svg');
+}
+
+.icon-car {
+  background: url('./ic_directions_car_48px_css.svg');
+}
+
+.icon-railway {
+  background: url('./ic_directions_railway_48px_css.svg');
+}
