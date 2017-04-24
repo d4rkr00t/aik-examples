@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './search-bar.css';
+import './search-bar.css';
 
 export default function SearchBar(props) {
   const onInputChange = event => props.onSearchInputChange(event.target.value);
