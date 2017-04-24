@@ -6,16 +6,16 @@ export default function SearchBar(props) {
   const onCheckboxChange = event => props.onInStockCheckboxChange(event.target.checked);
 
   return (
-    <form className={styles.searchBar}>
+    <form className="searchBar">
       <input
-        className={styles.input}
+        className="input"
         type="text"
         placeholder="Search..."
         value={props.filterText}
         onChange={onInputChange}
       />
 
-      <label className={styles.checkBoxContainer}>
+      <label className="checkBoxContainer">
         <input type="checkbox" checked={props.inStockOnly} onChange={onCheckboxChange} />
         {' '}
         Only show products in stock

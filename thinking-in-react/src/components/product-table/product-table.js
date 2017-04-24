@@ -16,7 +16,7 @@ export default function ProductTable(props) {
   });
 
   return (
-    <div className={styles.productTable}>
+    <div className="productTable">
       <table>
         <thead>
           <tr>
