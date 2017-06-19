@@ -110,7 +110,6 @@ export default function createApp(root) {
 
     filters: {
       pluralize() {
-        console.log(arguments);
       }
     },
 

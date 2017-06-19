@@ -1,4 +1,4 @@
-import { Router } from 'director';
+import { Router } from 'director/build/director';
 
 export default function routes(app) {
   const router = new Router();
@@ -15,6 +15,8 @@ export default function routes(app) {
       app.visibility = 'all';
     }
   });
+
+  console.log(1, router);
 
   router.init();
 }
