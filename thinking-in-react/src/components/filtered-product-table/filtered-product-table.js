@@ -2,27 +2,27 @@ import React from 'react';
 import SearchBar from 'components/search-bar/search-bar';
 import ProductTable from 'components/product-table/product-table';
 
-export default React.createClass({
-  displayName: 'FilterableProductTable',
+export default class FilterableProductTable extends React.Component {
+  constructor(props) {
+    super(props);
 
-  getInitialState() {
-    return {
+    this.state = {
       filterText: '',
       inStockOnly: false
     };
-  },
+  }
 
   updateFilterText(filterText) {
     this.setState({
       filterText: filterText
     });
-  },
+  }
 
   updateInStockOnly(inStockOnly) {
     this.setState({
       inStockOnly: inStockOnly
     });
-  },
+  }
 
   render() {
     const products = this.props.products.filter(product =>
@@ -46,4 +46,4 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
