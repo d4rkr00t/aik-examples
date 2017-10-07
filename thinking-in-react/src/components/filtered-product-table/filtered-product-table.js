@@ -3,26 +3,22 @@ import SearchBar from 'components/search-bar/search-bar';
 import ProductTable from 'components/product-table/product-table';
 
 export default class FilterableProductTable extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    filterText: '',
+    inStockOnly: false
+  };
 
-    this.state = {
-      filterText: '',
-      inStockOnly: false
-    };
-  }
-
-  updateFilterText(filterText) {
+  updateFilterText = filterText => {
     this.setState({
       filterText: filterText
     });
-  }
+  };
 
-  updateInStockOnly(inStockOnly) {
+  updateInStockOnly = inStockOnly => {
     this.setState({
       inStockOnly: inStockOnly
     });
-  }
+  };
 
   render() {
     const products = this.props.products.filter(product =>
