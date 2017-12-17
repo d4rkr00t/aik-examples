@@ -1,9 +1,10 @@
-import React from 'react';
-import './search-bar.css';
+import React from "react";
+import "./search-bar.css";
 
 export default function SearchBar(props) {
   const onInputChange = event => props.onSearchInputChange(event.target.value);
-  const onCheckboxChange = event => props.onInStockCheckboxChange(event.target.checked);
+  const onCheckboxChange = event =>
+    props.onInStockCheckboxChange(event.target.checked);
 
   return (
     <form className="searchBar">
@@ -16,8 +17,11 @@ export default function SearchBar(props) {
       />
 
       <label className="checkBoxContainer">
-        <input type="checkbox" checked={props.inStockOnly} onChange={onCheckboxChange} />
-        {' '}
+        <input
+          type="checkbox"
+          checked={props.inStockOnly}
+          onChange={onCheckboxChange}
+        />{" "}
         Only show products in stock
       </label>
     </form>
