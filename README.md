@@ -29,9 +29,7 @@ cd aik-examples
 
 ```sh
 # Run
-# -r optional for react hot load
-# -c enables css modules
-aik thinking-in-react/src/index.js -r -c
+aik thinking-in-react/src/index.js
 
 # Build
 aik thinking-in-react/src/index.js --build thinking-in-react/dist
