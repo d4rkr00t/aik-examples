@@ -1,10 +1,10 @@
-import React from 'react';
-import SearchBar from 'components/search-bar/search-bar';
-import ProductTable from 'components/product-table/product-table';
+import React from "react";
+import SearchBar from "../search-bar/search-bar";
+import ProductTable from "../product-table/product-table";
 
 export default class FilterableProductTable extends React.Component {
   state = {
-    filterText: '',
+    filterText: "",
     inStockOnly: false
   };
 
@@ -21,9 +21,12 @@ export default class FilterableProductTable extends React.Component {
   };
 
   render() {
-    const products = this.props.products.filter(product =>
-      product.name.toLowerCase().indexOf(this.state.filterText.toLowerCase()) !== -1
-      && ((this.state.inStockOnly && product.stocked) || !this.state.inStockOnly)
+    const products = this.props.products.filter(
+      product =>
+        product.name
+          .toLowerCase()
+          .indexOf(this.state.filterText.toLowerCase()) !== -1 &&
+        ((this.state.inStockOnly && product.stocked) || !this.state.inStockOnly)
     );
 
     return (

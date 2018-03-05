@@ -1,6 +1,6 @@
-import Vue from 'vue/dist/vue.js';
-import 'todomvc-app-css/index.css';
-import todoStorage from './store';
+import Vue from "vue/dist/vue.js";
+import "todomvc-app-css/index.css";
+import todoStorage from "./store";
 
 export default function createApp(root) {
   const filters = {
@@ -24,9 +24,9 @@ export default function createApp(root) {
     // app initial state
     data: {
       todos: todoStorage.fetch(),
-      newTodo: '',
+      newTodo: "",
       editedTodo: null,
-      visibility: 'all'
+      visibility: "all"
     },
 
     // watch todos change for localStorage persistence
@@ -64,7 +64,6 @@ export default function createApp(root) {
     // methods that implement data logic.
     // note there's no DOM manipulation here at all.
     methods: {
-
       addTodo() {
         const value = this.newTodo && this.newTodo.trim();
 
@@ -75,7 +74,7 @@ export default function createApp(root) {
           completed: false
         });
 
-        this.newTodo = '';
+        this.newTodo = "";
       },
 
       removeTodo(todo) {
@@ -109,15 +108,14 @@ export default function createApp(root) {
     },
 
     filters: {
-      pluralize() {
-      }
+      pluralize() {}
     },
 
     // a custom directive to wait for the DOM to be updated
     // before focusing on the input field.
     // http://vuejs.org/guide/custom-directive.html
     directives: {
-      'todo-focus'(el) {
+      "todo-focus"(el) {
         if (!el.value) return;
         Vue.nextTick(() => el.focus());
       }

@@ -1,7 +1,7 @@
-import React from 'react';
-import ProductRow from 'components/product-row/product-row';
-import ProductCategoryRow from 'components/product-category-row/product-category-row';
-import './product-table.css';
+import React from "react";
+import ProductRow from "../product-row/product-row";
+import ProductCategoryRow from "../product-category-row/product-category-row";
+import "./product-table.css";
 
 export default function ProductTable(props) {
   const rows = [];
@@ -9,7 +9,12 @@ export default function ProductTable(props) {
 
   props.products.forEach(product => {
     if (product.category !== lastCategory) {
-      rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
+      rows.push(
+        <ProductCategoryRow
+          category={product.category}
+          key={product.category}
+        />
+      );
     }
     rows.push(<ProductRow product={product} key={product.name} />);
     lastCategory = product.category;
